@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   background-color: #005247;
@@ -7,8 +13,9 @@ body {
   background-color: #005247;
   width: 100%;
   height: 80px;
+  padding-right: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -51,8 +58,12 @@ body {
   border-radius: 40px;
   color: white;
   padding: 60px 68px 40px;
-  min-height: 500px;
-  width: 300px;
+  min-height: 700px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 20px 0px;
 }
 .login__container--form {
   display: flex;
@@ -80,4 +91,81 @@ body {
   align-items: center;
   font-size: 14px;
   margin-bottom: 10px;
+}
+.login__container--social-media > div > img{
+ width: 30px;
+ margin-right: 10px;
+}
+.login__container--register{
+  font-size: 14px;
+}
+.login__container--register a{
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.login__container--register a:hover{
+  text-decoration: underline;
+}
+.input{
+  background-color: transparent;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid white;
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  outline: none;
+  color: white;
+  height: 50px;
+}
+::placeholder{
+  color: white;
+}
+.button{
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Mulish", sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100px;
+  width: 100%;
+  background-color: #4b8077;
+}
+.footer a{
+  color: white;
+  font-size: 14px;
+  padding: 0px 30px;
+  text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (max-width:600px){
+  .login__container{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+    border-radius: none;
+  }
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
