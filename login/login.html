@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img
+          class="header__img"
+          src="../assets/logo-solo.png"
+          alt="logo de empresa"
+        />
+        <div class="logo__lema">
+          <h2>Orozco Ventas</h2>
+          <h4>Lo mejor al mejor precio</h4>
+        </div>
+      </div>
+    </header>
+
+    <section class="login">
+      <section class="login__container">
+        <h2>Start Session</h2>
+        <form action="" class="login__container--form">
+          <input class="input" type="text" placeholder="Email" />
+          <input class="input" type="password" placeholder="Password" />
+          <button class="button">Iniciar Sesion</button>
+          <div class="login__container--remember-me">
+            <label for="">
+              <input
+                type="checkbox"
+                name=""
+                id="cbox1"
+                value="checkbox"
+              />Recuerdame
+            </label>
+            <a href="">Olvide mi contrasena</a>
+          </div>
+        </form>
+        <section class="login__container--social-media">
+          <div>
+            <img
+              src="../assets/icons8-logo-de-google-50.png"
+              alt="google"
+            />Inicia sesion con Google
+          </div>
+          <div>
+            <img src="../assets/icons8-twitterx-50.png" alt="twitter" />Inicia
+            sesion con Twiter
+          </div>
+        </section>
+        <p class="login__container--register">
+          No tienes ninguna cuenta <a href="">Registrate</a>
+        </p>
+      </section>
+    </section>
+    <footer class="footer">
+      <a href="/">Terminos de uso</a>
+      <a href="">Declaracion de privacidad</a>
+      <a href="">Centro de Ayuda</a>
+    </footer>
+  </body>
+</html>
