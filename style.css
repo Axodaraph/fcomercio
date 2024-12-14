@@ -216,4 +216,8 @@ body {
         color: white;
         font-size: 21px;
       }
+    .header__menu{
+        padding-right: 0px;
+        padding-left: 30px;
+    }
   }
