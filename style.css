@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
   .logo__lema h2 {
     margin: 0px;
@@ -201,12 +202,12 @@ body {
 
   @media only screen and (max-width:600px){
     .logo__lema h2 {
-        font-size: 21px;
+        font-size: 18px;
         margin: 0px;
         color: white;
       }
       .logo__lema h4 {
-        font-size: 18px;
+        font-size: 16px;
         color: #f7931a;
         margin: 0px;
       }
