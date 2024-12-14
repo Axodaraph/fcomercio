@@ -119,16 +119,21 @@ body {
 
   .carousel {
     width: 100%;
-    overflow: scroll;
     padding: 30px;
     position: relative;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
   }
   .carousel__container {
+ 
     white-space: nowrap;
     margin: 70px 0px;
     padding-bottom: 10px;
   }
   .carousel-item {
+    scroll-snap-align: center;
     background-color: #c3fcf1;
     width: 200px;
     height: 250px;
