@@ -198,3 +198,20 @@ body {
   .footer a:hover{
     text-decoration: underline;
   }
+
+  @media only screen and (max-width:600px){
+    .logo__lema h2 {
+        font-size: 21px;
+        margin: 0px;
+        color: white;
+      }
+      .logo__lema h4 {
+        font-size: 18px;
+        color: #f7931a;
+        margin: 0px;
+      }
+      .main__title {
+        color: white;
+        font-size: 21px;
+      }
+  }
