@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function ProductCard({imagen, name = "Picadillo", price= 0, category = "Misceláneas", stock= 0, }){
+export function ProductCard({imagen, name = "Picadillo", price= 0, stock= 0}){
     const [isShoping, setIsShoping] = useState(false)
     const [count, setCount] = useState(1);   
     
