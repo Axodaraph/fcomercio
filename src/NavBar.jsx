@@ -3,7 +3,7 @@ import { ShopingList } from './ShopingList'
 
 export function NavBar(){
     function showList () {
-        <ShopingList />
+        
     }
 
     return(
