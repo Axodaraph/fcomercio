@@ -1,43 +1,50 @@
-import { ProductSection } from './ProductSection'
-import { NavBar } from './NavBar'
-import './App.css'
-
-
-
+import { ProductSection } from './ProductSection';
+import { NavBar } from './NavBar';
+import { ShopingList } from './ShopingList'
+import './App.css';
+import { getProduct } from './getProduct';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const productos = [
-    {
-      name: 'Picadillo',
-      price: '300',
-      imgURL: 'https://images.pexels.com/photos/5894143/pexels-photo-5894143.jpeg?auto=compress&cs=tinysrgb&w=600',
-      stock: 50
-    },
-    {
-      name: 'Carne picada',
-      price: '1000',
-      imgURL: 'https://images.pexels.com/photos/17126515/pexels-photo-17126515/free-photo-of-close-up-of-sliced-meat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      stock: 50
-    },
-    {
-      name: 'Hamburguesas',
-      price: '650',
-      imgURL: 'https://images.pexels.com/photos/3877668/pexels-photo-3877668.jpeg?auto=compress&cs=tinysrgb&w=600',
-      stock: 50
-    },{
-      name: 'Salchichas',
-      price: '500',
-      imgURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUuPRIdu_aHLe1WcHqkPFdUOumGHTtegiZpA&s',
-      stock: 50
-    }
-  ]
+  const categories = [
+    'Cárnicos', 'Lácteos', 'Cereales', 'Enlatados', 
+    'Panaderia', 'Bebidas', 'Condimentos', 'Snacks'
+  ];
 
+  const [productsByCategory, setProductsByCategory] = useState({});
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = {};
+
+      for (const category of categories) {
+        try {
+          const data = await getProduct(category.toLowerCase());
+          if (data.length > 0) {
+            products[category] = data; // Guarda los productos por categoría
+          }
+        } catch (error) {
+          console.error(`Error fetching ${category}:`, error);
+        }
+      }
+
+      setProductsByCategory(products); // Almacena todos los productos encontrados
+    };
+
+    fetchProducts();
+  }, []); // Solo se ejecuta una vez al montar el componente
+  console.log(productsByCategory)
   return (
     <>
-      <NavBar/>
-      <ProductSection product={productos}/>
+      <NavBar />
+      <div className='main'>
+      {Object.entries(productsByCategory).map(([category, products]) => (
+        <ProductSection key={category} product={products} category={category} />
+      ))}
+      </div>
+      <ShopingList/>
     </>
   )
 }
 
-export default App
+export default App;

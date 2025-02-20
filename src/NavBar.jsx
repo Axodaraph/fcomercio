@@ -1,6 +1,11 @@
 import './navbar.css'
+import { ShopingList } from './ShopingList'
 
 export function NavBar(){
+    function showList () {
+        <ShopingList />
+    }
+
     return(
         <header className="header">
             <div className="header__logo">
@@ -11,7 +16,7 @@ export function NavBar(){
                 </div>
             </div>
             <div className="header__menu">
-                <button className="header__menu-add"></button>
+                <button className="header__menu-add" onClick={showList}></button>
                 <button className="header__menu-user"></button>
             </div>
         </header>
