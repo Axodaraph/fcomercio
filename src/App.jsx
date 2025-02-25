@@ -1,49 +1,27 @@
-import { ProductSection } from './ProductSection';
-import { NavBar } from './NavBar';
-import { ShopingList } from './ShopingList'
+import { ProductSection } from './components/ProductSection.jsx';
+import { NavBar } from './components/NavBar.jsx';
 import './App.css';
-import { getProduct } from './getProduct';
-import { useEffect, useState } from 'react';
+import { CartProvider } from './context/cart.jsx';
+import { Cart } from './components/Cart.jsx';
+import { useFetchData } from './hooks/useFetchData.js';
+
+
 
 function App() {
-  const categories = [
-    'Cárnicos', 'Lácteos', 'Cereales', 'Enlatados', 
-    'Panaderia', 'Bebidas', 'Condimentos', 'Snacks'
-  ];
-
-  const [productsByCategory, setProductsByCategory] = useState({});
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const products = {};
-
-      for (const category of categories) {
-        try {
-          const data = await getProduct(category.toLowerCase());
-          if (data.length > 0) {
-            products[category] = data; // Guarda los productos por categoría
-          }
-        } catch (error) {
-          console.error(`Error fetching ${category}:`, error);
-        }
-      }
-
-      setProductsByCategory(products); // Almacena todos los productos encontrados
-    };
-
-    fetchProducts();
-  }, []); // Solo se ejecuta una vez al montar el componente
-  console.log(productsByCategory)
+  const [data] = useFetchData();
+  console.log(globalThis.localStorage)
   return (
-    <>
+    <CartProvider>
       <NavBar />
-      <div className='main'>
+      <Cart/>
+      <ProductSection product={data}/>
+      {/* <div className='main'>
       {Object.entries(productsByCategory).map(([category, products]) => (
         <ProductSection key={category} product={products} category={category} />
       ))}
-      </div>
-      <ShopingList/>
-    </>
+      </div> */}
+      
+    </CartProvider>
   )
 }
 

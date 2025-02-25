@@ -3,17 +3,20 @@
   --green-past-light: #5DB996;
   --card-background: #FBF6E9;
   --background-section: #E3F0AF;
-}
 
+}
 .main{
   padding-top: 80px;
 }
 
 .ov-productSection{
+  margin-top: 80px;
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #EEEEEE;
   
 }
@@ -28,13 +31,16 @@
 }
 
 .ov-productSection-carrousel{
-  display: flex;
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
-  white-space: nowrap;
+  width: 80%;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(
+        150px,
+        1fr
+      )
+    );
+    gap: 2rem;
 }
 
 
@@ -42,14 +48,16 @@
   display: flex;
   flex-direction: column;
   background-color: var(--card-background);
-  width: 200px;
-  height: 250px;
+  /* width: 200px;
+  height: 250px; */
   color: black;
+  align-items: center;
+  justify-content: center;
   font-size: .8rem;
   border-radius: 20px;
-  margin: 10px 20px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);  
   transition: border 3 linear;
+  gap: 10px;
 }
 
 .ov-productCard:hover{
@@ -67,16 +75,16 @@
 }
 
 .ov-productCard-name {
-  margin: 10px ;
+  
   color: #222;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .ov-productCard-info{
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  gap: 5px;
 }
 .ov-productCard-info .precio{
   color: var(--green-past);
@@ -87,10 +95,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 180px;
+  /* width: 180px; */
+  width: 80%;
   height: 50px;
+  margin-bottom: 10px;
   border-radius: 10px;
-  margin: 10px;
   background-color: var(--green-past-light);
   transition: background-color .5 ease ;
 }

@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 
-export const useFetchData = (initialCategory) => {
+export const useFetchData = () => {
   const [data, setData] = useState([]);
-  const categoryRef = useRef(initialCategory);
 
-  const fetchData = async (category) => {
+  const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:7000/productos?category=${category}`);
+      const response = await fetch(`http://localhost:7000/productos`);
       const result = await response.json();
       setData(result);
     } catch (error) {
@@ -14,14 +13,11 @@ export const useFetchData = (initialCategory) => {
     }
   };
 
-  const changeCategory = (newCategory) => {
-    categoryRef.current = newCategory;
-    fetchData(categoryRef.current);
-  };
+  
 
   useEffect(() => {
-    fetchData(categoryRef.current);
+    fetchData();
   }, []);
 
-  return [data, changeCategory];
+  return [data];
 };
