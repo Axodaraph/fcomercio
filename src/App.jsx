@@ -3,24 +3,22 @@ import { NavBar } from './components/NavBar.jsx';
 import './App.css';
 import { CartProvider } from './context/cart.jsx';
 import { Cart } from './components/Cart.jsx';
-import { useFetchData } from './hooks/useFetchData.js';
+import {products as initialProducts} from './mocks/Product.json'
+import { useFilters } from './hooks/useFilters.js';
 
 
 
 function App() {
-  const [data] = useFetchData();
-  console.log(globalThis.localStorage)
+  console.log(initialProducts)
+  const { filteredProducts } = useFilters()
+  const filtredProducts = filteredProducts(initialProducts)
+  console.log(filtredProducts)
   return (
     <CartProvider>
       <NavBar />
       <Cart/>
-      <ProductSection product={data}/>
-      {/* <div className='main'>
-      {Object.entries(productsByCategory).map(([category, products]) => (
-        <ProductSection key={category} product={products} category={category} />
-      ))}
-      </div> */}
       
+      <ProductSection product={filtredProducts}/>      
     </CartProvider>
   )
 }

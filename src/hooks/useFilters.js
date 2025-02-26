@@ -7,7 +7,7 @@ export function useFilters () {
      // ESTO ES PARA JUNIORS
      const filteredProducts = (products) => {
        return products.filter(product => {
-         return product.price >= filters.minPrice && 
+         return product.precio >= filters.minPrice && 
          (filters.category === 'all' || product.category ===
          filters.category)
        })

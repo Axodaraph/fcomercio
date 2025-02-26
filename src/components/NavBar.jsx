@@ -1,10 +1,7 @@
-import { Cart } from './Cart'
+import { Filters } from './Filters'
 import './navbar.css'
 
 export function NavBar(){
-    function showList () {
-        
-    }
 
     return(
         <header className="header">
@@ -16,7 +13,7 @@ export function NavBar(){
                 </div>
             </div>
             <div className="header__menu">
-                
+            <Filters />
             </div>
         </header>
     )

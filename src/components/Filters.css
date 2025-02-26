@@ -1,0 +1,19 @@
+.filters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.filters > div {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 599px) {
+    .filters{
+        flex-direction: column;
+    }
+}

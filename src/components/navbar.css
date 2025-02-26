@@ -47,7 +47,10 @@
   
 .header__menu {
     padding-right: 30px;
+    position: absolute;
     display: flex;
+    right: 70px;
+    top: 15px;
     align-items: center;
     justify-content: flex-end;
   }

@@ -1,0 +1,94 @@
+{
+    "products": [
+    {
+      "_id": "67b400f324ed0ef07f95242d",
+      "nombre": "palitroque",
+      "precio": 160,
+      "stock": 10,
+      "imagen": "https://img2.elyerromenu.com/images/mercadito-marshe/bolsa-de-palitroques/img.webp",
+      "category": 
+        "Panaderia"
+      
+    },
+    {
+      "_id": "67b4024424ed0ef07f95242e",
+      "nombre": "Florapan",
+      "precio": 180,
+      "stock": 10,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxIIox1PMk0KEIZiZEVLITACmeWjiLQKSTvg&s",
+      "category": 
+        "Panaderia"
+      
+    },
+    {
+      "_id": "67b4062324ed0ef07f95242f",
+      "nombre": "galletas de mantequilla",
+      "precio": 180,
+      "stock": 10,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk7viLcbsBrVx5TLSrlpcIAkNXO_Ma17XVNQ&s",
+      "category": 
+        "Panaderia"
+      
+    },
+    {
+      "_id": "67b48c5efe7fc2d8a57f0d6a",
+      "nombre": "Pan Duro",
+      "precio": 150,
+      "stock": 10,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa8e9gUQ28lbzV0IciImdOBg0Sg1xLqCFpXA&s",
+      "category": 
+        "Panaderia"
+      
+    },
+    {
+      "_id": "67b48d71fe7fc2d8a57f0d6b",
+      "nombre": "Torticas de Morón",
+      "precio": 40,
+      "stock": 10,
+      "imagen": "https://img-global.cpcdn.com/recipes/5aec2633dc39f83f/680x482cq70/torticas-de-moron-foto-principal.jpg",
+      "category": 
+        "Panaderia"
+      
+    },
+    {
+      "_id": "67b4952afe7fc2d8a57f0d6c",
+      "nombre": "LB Picadillo MDM",
+      "precio": 310,
+      "stock": 10,
+      "imagen": "https://habana.mercocaribe.com/wp-content/uploads/2024/06/MDM-de-pollo-600x686.jpg",
+      "category": 
+        "Cárnicos"
+      
+    },
+    {
+      "_id": "67b49571fe7fc2d8a57f0d6d",
+      "nombre": "Pollo 10lb",
+      "precio": 3400,
+      "stock": 10,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl9svGnkFTHxalk2-sXtYmOWgxXeINMPw_GQ&s",
+      "category": 
+        "Cárnicos"
+      
+    },
+    {
+      "_id": "67b552fb66727e6a368d3fd5",
+      "nombre": "Pomo de Coca Cola",
+      "precio": 500,
+      "stock": 10,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS88RnzG_hjsH9SPNOpEZxRQr1BfIqnF0P_Ww&s",
+      "category": 
+        "Bebidas"
+      
+    },
+    {
+      "_id": "67b5ce1066727e6a368d3fd6",
+      "nombre": "Pomo de Fanta Naranja",
+      "precio": 300,
+      "stock": 10,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpMNA_0ugQIUFzZCfC6--PW91QX7DhuhnQow&s",
+      "category": 
+        "Bebidas"
+      
+    }
+  ]
+}
