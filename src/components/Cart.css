@@ -2,7 +2,6 @@
     margin-top: 80px;
     background: #FBF6E9;
     display: none;
-    padding: 32px;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -13,6 +12,20 @@
     overscroll-behavior-y: contain;
     scroll-snap-type: y proximity;
     white-space: nowrap;
+  }
+
+  .cart ul {
+    margin-top: 20px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(
+        250px,
+        1fr
+      )
+    );
+    gap: 1rem;
   }
   
   .cart img {
@@ -61,8 +74,10 @@
   }
   
   .cart-button ~ input:checked ~ .cart {
-    height: 100%;
-    display: block;
+    height: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 940px) {

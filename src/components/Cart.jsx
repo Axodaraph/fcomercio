@@ -12,7 +12,7 @@ function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart}
             <img className="imagen" src={imagen} alt={name} />
             </div>
             
-            <div className="cart-item__cant">
+            <div className="cart-item__info">
                 <h2>{nombre}</h2>
                 <p>${precio}</p>
                 <strong>cant: {quantity}</strong>

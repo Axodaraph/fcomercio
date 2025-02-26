@@ -4,7 +4,7 @@ import { useCart } from "../hooks/useCart";
 import {AddToCartIcon, RemoveFromCartIcon}  from "../components/Icons"
 
 
-export function ProductSection({product=[] , category = "Misceláneas"}){
+export function ProductSection({product=[] }){
     const {cart, addToCart, removeFromCart} = useCart()
     const checkProductInCart = product => {
         return cart.some(item => item._id === product._id)
@@ -13,7 +13,7 @@ export function ProductSection({product=[] , category = "Misceláneas"}){
     const list = product
     return (
         <section className="ov-productSection">
-            <h2 className="ov-productSection-title">{category}</h2>
+            <h2 className="ov-productSection-title">Nuestras Ofertas</h2>
                 <ul className="ov-productSection-carrousel">
                 {list.map((product) => {
                 const isProductInCart = checkProductInCart(product)
@@ -30,7 +30,7 @@ export function ProductSection({product=[] , category = "Misceláneas"}){
                 </div>
                 
                 
-                <button className="ov-productCard-shoping" style={{backgroundColor: isProductInCart ? '#56070c' : '#5DB996'}} onClick={() => isProductInCart? removeFromCart(product) : addToCart(product)}>
+                <button className="ov-productCard-shoping" style={{backgroundColor: isProductInCart ? 'transparent' : '#5DB996', color: isProductInCart ? 'red' : '#222'}} onClick={() => isProductInCart? removeFromCart(product) : addToCart(product)}>
                   {
                     isProductInCart ?
                     <RemoveFromCartIcon/>

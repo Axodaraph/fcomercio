@@ -31,7 +31,7 @@
 }
 
 .ov-productSection-carrousel{
-  width: 80%;
+  width: 60%;
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
@@ -41,6 +41,8 @@
       )
     );
     gap: 2rem;
+margin-bottom: 20px;
+    
 }
 
 
@@ -56,13 +58,13 @@
   font-size: .8rem;
   border-radius: 20px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);  
-  transition: border 3 linear;
+  transition: all 1s ease;
   gap: 10px;
 }
 
 .ov-productCard:hover{
-  border: 2px solid var(--green-past);
-  
+  border: 1px solid var(--green-past);
+  transform: scale(1.1);
 }
 
 .ov-productCard-img {
@@ -95,19 +97,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* width: 180px; */
   width: 80%;
   height: 50px;
   margin-bottom: 10px;
   border-radius: 10px;
-  background-color: var(--green-past-light);
-  transition: background-color .5 ease ;
+  border: transparent;
+  box-shadow: 0px 1.5px 2px rgba(0, 0, 0, 0.3);
 }
 
-.ov-productCard-shoping:hover{
-  background-color: rgb(10, 126, 61);
-  
-}
+
 
 .ov-productCard-shoping-more{
   display: none;
