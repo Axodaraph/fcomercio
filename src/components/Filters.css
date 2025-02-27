@@ -5,6 +5,7 @@
     justify-content: space-between;
     font-size: 16px;
     font-weight: 700;
+    color: #12271b;
 }
 
 .filters > div {
@@ -12,8 +13,24 @@
     gap: 1rem;
 }
 
-@media (max-width: 599px) {
+.filters select {
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0,0,0, 0.2);
+}
+
+@media (max-width: 680px) {
     .filters{
         flex-direction: column;
+        font-size: 12px;
+        width: 100px;
+        gap: 5px;
+    }
+    .filters > div {
+        gap: 10px;
+        width: 100px;
+    }
+    .filters input {
+        width: 70px;
     }
 }
