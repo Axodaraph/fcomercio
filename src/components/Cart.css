@@ -74,7 +74,7 @@
   }
   
   .cart-button ~ input:checked ~ .cart {
-    height: 150%;
+    height: 100000%;
     display: flex;
     flex-direction: column;
     align-items: center;
