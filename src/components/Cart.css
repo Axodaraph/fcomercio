@@ -16,7 +16,7 @@
 
   .cart ul {
     margin-top: 20px;
-    width: 60%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
