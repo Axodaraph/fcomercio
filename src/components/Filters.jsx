@@ -26,12 +26,12 @@ export function Filters () {
     return (
         <section className="filters">
 
-            <div>
+            {/* <div>
                 <label htmlFor={minPriceFilterId}>Precio Mínimo</label>
                 <input type="range" id={minPriceFilterId} min='0' max='1000' onChange={handleChangeMinPrice} 
                 value={filters.minPrice}/>
                 <span>${filters.minPrice}</span>
-            </div>
+            </div> */}
 {/* 'Cárnicos', 'Lácteos', 'Cereales', 'Enlatados', 'Panaderia', 'Bebidas', 'Condimentos',
       'Snacks' */}
             <div>

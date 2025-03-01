@@ -5,8 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    opacity: .95;
+    backdrop-filter: blur(8px);
   }
   
 .header__logo{
@@ -50,7 +52,7 @@
     position: absolute;
     display: flex;
     right: 100px;
-    top: 15px;
+    top: 30px;
     align-items: center;
     justify-content: flex-end;
   }

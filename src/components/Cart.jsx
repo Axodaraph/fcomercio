@@ -4,7 +4,7 @@ import './Cart.css'
 import './CartShop.css'
 import { useCart } from "../hooks/useCart.js";
 
-function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart}) {
+function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart, restToCart}) {
     return (
         <li className="cart-item">
             <div className="cart-item__img">
@@ -20,7 +20,7 @@ function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart}
 
             <div className='cart-item__cant'>
                 <button className='addToCart' onClick={addToCart}>+</button>
-                <button className='restToCart'>-</button>
+                <button className='restToCart' onClick={restToCart}>-</button>
             </div>
 
             <button className='cart-item__remove' onClick={removeFromCart}><RemoveFromCartIcon/></button>
@@ -30,18 +30,20 @@ function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart}
 
 export function Cart () {
     const cartCheckboxId = useId()
-    const {cart, clearCart, addToCart, removeFromCart} = useCart()
+    const {cart, clearCart, addToCart, removeFromCart, restToCart} = useCart()
 
     return (
-        <>
+        <>  
+            <input type="checkbox" id={cartCheckboxId} hidden />
             <label className="cart-button" htmlFor={cartCheckboxId} >
             </label>
-            <input type="checkbox" id={cartCheckboxId} hidden />
+            
             <aside className="cart">
                 <ul>
                     {cart.map(product => (
                         <CartItem key={product._id}
                         addToCart={() => addToCart(product)}
+                        restToCart={() => restToCart(product)}
                         removeFromCart={() => removeFromCart(product)}
                         {...product}
                         />

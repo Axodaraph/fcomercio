@@ -52,10 +52,10 @@
   .cart-button {
     align-items: center;
     background: transparent;
-    position: absolute;
+    position: fixed;
     border-radius: 10px;
     cursor: pointer;
-    display: flex;
+    display: inline-block;
     height: 42px;
     justify-content: center;
     right: 40px;
@@ -67,18 +67,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    overflow: hidden;
   }
   
   .cart-button:hover {
     transform: scale(1.1);
   }
   
-  .cart-button ~ input:checked ~ .cart {
+  input[type="checkbox"]:checked ~ .cart {
     height: 100000%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+   input[type="checkbox"]:checked + .cart-button {
+    background-image: url('../assets/bx-store.svg');
+  } 
 
   @media (max-width: 940px) {
     .cart {
