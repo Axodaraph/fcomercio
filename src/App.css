@@ -64,8 +64,8 @@ margin-bottom: 20px;
 }
 
 .ov-productCard:hover{
-  border: 1px solid var(--green-past);
-  transform: scale(1.1);
+  border: 1px solid var(--green-past);/* 
+  transform: scale(1.1); */
 }
 
 .ov-productCard-img {
@@ -138,3 +138,8 @@ margin-bottom: 20px;
   background-size: contain;
 }
 
+@media (max-width: 500px){
+  .ov-productSection-carrousel {
+    width: 60%;
+  }
+}
