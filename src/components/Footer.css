@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #118B50;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact_us {
