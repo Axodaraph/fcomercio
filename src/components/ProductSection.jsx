@@ -5,14 +5,16 @@ import {AddToCartIcon, RemoveFromCartIcon}  from "../components/Icons"
 
 
 export function ProductSection({product=[] }){
-    const {cart, addToCart, removeFromCart} = useCart()
+    const {cart, addToCart, removeFromCart, display} = useCart()
     const checkProductInCart = product => {
         return cart.some(item => item._id === product._id)
       }
 
     const list = product
     return (
-        <section className="ov-productSection">
+        <section className="ov-productSection" style={{
+            display: display? "none" : "flex"
+        }}>
             <h2 className="ov-productSection-title">Nuestras Ofertas</h2>
                 <ul className="ov-productSection-carrousel">
                 {list.map((product) => {

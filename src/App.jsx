@@ -5,6 +5,7 @@ import { CartProvider } from './context/cart.jsx';
 import { Cart } from './components/Cart.jsx';
 import {products as initialProducts} from './mocks/Product.json'
 import { useFilters } from './hooks/useFilters.js';
+import { Footer } from './components/Footer.jsx';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Cart/>
       
       <ProductSection product={filtredProducts}/>      
+      <Footer/>
     </CartProvider>
   )
 }

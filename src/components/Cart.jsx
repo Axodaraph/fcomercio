@@ -8,8 +8,7 @@ function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart,
     return (
         <li className="cart-item">
             <div className="cart-item__img">
-            <img className="imagen" src={imagen} alt={name} />
-            <img className="imagen" src={imagen} alt={name} />
+            <img src={imagen} alt={nombre} />
             </div>
             
             <div className="cart-item__info">
@@ -30,15 +29,23 @@ function CartItem ({imagen, precio, nombre, quantity, addToCart, removeFromCart,
 
 export function Cart () {
     const cartCheckboxId = useId()
-    const {cart, clearCart, addToCart, removeFromCart, restToCart} = useCart()
+    const {cart, clearCart, addToCart, removeFromCart, restToCart, setDisplay, display} = useCart()
+
+    function changeDisplay () {
+        setDisplay(!display)
+    }
 
     return (
         <>  
             <input type="checkbox" id={cartCheckboxId} hidden />
-            <label className="cart-button" htmlFor={cartCheckboxId} >
+            <label onClick={changeDisplay} className="cart-button" htmlFor={cartCheckboxId} >
             </label>
             
-            <aside className="cart">
+            <aside className="cart" style={
+                {
+                    display: display? "flex" : "none"
+                }
+            }>
                 <ul>
                     {cart.map(product => (
                         <CartItem key={product._id}

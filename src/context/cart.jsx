@@ -1,4 +1,4 @@
-import { useReducer, createContext } from 'react'
+import { useReducer, createContext, useState } from 'react'
 import { cartReducer, cartInitialState } from '../Reducers/cart.js'
 
 export const CartContext = createContext()
@@ -30,6 +30,8 @@ function useCartReducer () {
 // es MÍNIMA
 export function CartProvider ({ children }) {
   const { state, addToCart, restToCart, removeFromCart, clearCart } = useCartReducer()
+  const [display, setDisplay] = useState(false)
+
 
   return (
     <CartContext.Provider value={{
@@ -37,7 +39,9 @@ export function CartProvider ({ children }) {
       addToCart,
       restToCart,
       removeFromCart,
-      clearCart
+      clearCart,
+      display,
+      setDisplay
     }}
     >
       {children}

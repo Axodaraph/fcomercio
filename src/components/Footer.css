@@ -1,0 +1,73 @@
+.section_footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #118B50;
+}
+
+.contact_us {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact_us a {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact_us p {
+    font-size: 12px;
+    width: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.img_social{
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/whatsapp_icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img_social_telefono{
+    width: 32px;
+    height: 32px;
+    background-image: url('../assets/icons8-mobile-social-networking-30.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img_social_email{
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons8-mail-24.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 160px;
+    height: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.Logo h3 {
+    color: white;
+}
+.Logo p {
+    color: #f7931a;
+}
