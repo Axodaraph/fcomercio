@@ -15,7 +15,7 @@ export function ProductSection({product=[] }){
         <section className="ov-productSection" style={{
             display: display? "none" : "flex"
         }}>
-            <h2 className="ov-productSection-title">Nuestras Ofertas</h2>
+            <h2 className="ov-productSection-title">¿Qué deseas comprar hoy?</h2>
                 <ul className="ov-productSection-carrousel">
                 {list.map((product) => {
                 const isProductInCart = checkProductInCart(product)

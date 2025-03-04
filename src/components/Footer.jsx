@@ -10,7 +10,7 @@ export function Footer () {
                     rel="noreferrer">
                         <div className='img_social'></div>
                         <p>
-                            Unete a nuestro whatsapp
+                            Únete a nuestro whatsapp
                         </p>
                 </a>
                     
