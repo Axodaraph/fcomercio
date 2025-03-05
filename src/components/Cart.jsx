@@ -45,7 +45,6 @@ function PriceTable ({cart}) {
                                 <th className="table__top-right table__right">Costo</th>
                             </tr>
                             </thead>
-                            
                             {
                                 cart.map(product => {
                                     totalPrice += product.precio * product.quantity

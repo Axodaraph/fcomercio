@@ -68,8 +68,8 @@ margin-bottom: 20px;
 }
 
 .ov-productCard:hover{
-  border: 1px solid var(--green-past);/* 
-  transform: scale(1.1); */
+  outline: 1px solid var(--green-past);
+  transform: scale(1.1);
 }
 
 .ov-productCard-img {

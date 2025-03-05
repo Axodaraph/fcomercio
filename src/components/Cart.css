@@ -7,11 +7,6 @@
     top: 0px;
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    overscroll-behavior-y: contain;
-    scroll-snap-type: y proximity;
-    white-space: nowrap;
   }
 
   .cart ul {
@@ -34,7 +29,6 @@
   }
   
   .cart li {
-    border-bottom: 1px solid #444;
     padding-bottom: 16px;
   }
   
@@ -79,7 +73,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
   }
 
    input[type="checkbox"]:checked + .cart-button {

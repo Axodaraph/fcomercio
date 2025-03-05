@@ -6,11 +6,10 @@
     height: auto;
     margin-bottom: 1rem;
     padding: 1em;
-    border: 1px solid #ccc;
     border-radius: 1.5rem;
     background-color: #FBF6E9;
     box-shadow: 0px 2px 5px grey;
-    color: #213547;
+    color: #636363;
 }
 
 .cart-item__img {
@@ -62,7 +61,7 @@ button {
 
 .addToCart {
     color: green;
-    transition: border 0.5s ease;
+    transition: all 0.5s ease;
 }
 .restToCart {
     transition: color 0.5s ease;
@@ -73,7 +72,7 @@ button {
     color: red;
 }
 .addToCart:hover{
-     border: 1px solid green;
+    outline: 1px solid green;
 }
 
 .cart-item__remove{
@@ -82,5 +81,5 @@ button {
 
 .cart-item__remove:hover {
     color: red;
-    border: 1px solid red;
+    outline: 1px solid red;
 }
